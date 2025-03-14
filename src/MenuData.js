@@ -24,7 +24,7 @@ export const MenuData = [
 
     {
         title: "Sign up",
-        url: "#",
+        url: "/Register",
         cName: "nav-links-mobile",
     },
 

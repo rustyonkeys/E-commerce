@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { FaArrowLeft } from 'react-icons/fa';
 
 const SellerPage = () => {
   const [productName, setProductName] = useState("");
@@ -6,6 +8,8 @@ const SellerPage = () => {
   const [currency, setCurrency] = useState("USD");
   const [description, setDescription] = useState("");
   const [images, setImages] = useState([null, null, null]); // Three image upload slots
+
+  const navigate = useNavigate(); // Create navigate function for redirection
 
   const handleImageChange = (index, event) => {
     const newImages = [...images];
@@ -28,6 +32,15 @@ const SellerPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)} // Go back to the previous page
+        className="absolute top-8 left-8 bg-gray-300 p-2 rounded-lg hover:bg-gray-400"
+      >
+      <FaArrowLeft size={28} />
+        
+      </button>
+
       {/* Seller Dashboard Heading */}
       <h1 className="text-4xl font-bold text-center mb-2">Seller Dashboard</h1>
       <p className="text-lg text-center mb-6">⭐ Seller Rating: 4.5/5</p>

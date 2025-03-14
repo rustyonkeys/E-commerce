@@ -20,7 +20,7 @@ const PopupScreen = () => {
 
             <div className="flex justify-around">
               <button
-                onClick={() => handleRedirect("/home")}
+                onClick={() => handleRedirect("/")}
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
               >
                 Buyer
