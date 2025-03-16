@@ -1,7 +1,7 @@
 import React, { useState, } from "react";
 import { useNavigate } from "react-router-dom";
 
-const PopupScreen = () => {
+const PopUpScreen = () => {
   const [showModal, setShowModal] = useState(true); // Show modal on load
   const navigate = useNavigate();
 
@@ -39,4 +39,4 @@ const PopupScreen = () => {
   );
 };
 
-export default PopupScreen;
+export default PopUpScreen;

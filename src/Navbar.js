@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { MenuData } from "./MenuData";
+import { MenuData } from "./MenuData.js";
+
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,6 +39,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        
       </div>
     </nav>
   );

@@ -1,14 +1,14 @@
 export const MenuData = [
     {
         title: "Home",
-        url: "HomePage.js",
+        url: "/",
         cName: "nav-links",
         icon:"fa-solid fa-house fa-user"
     },
 
     {
         title: "Cart",
-        url: "#",
+        url: "/cart",
         cName: "nav-links",
         icon:"fas fa-shopping-cart text-2xl text-white hover:text-white-500 cursor-pointer"
 
@@ -16,7 +16,14 @@ export const MenuData = [
 
     {
         title: "Whishlists",
-        url: "#",
+        url: "/wishlist",
+        cName: "nav-links",
+        icon:"fa-solid fa-briefcase"
+    },
+
+    {
+        title: "Marketplace",
+        url: "/marketplace",
         cName: "nav-links",
         icon:"fa-solid fa-briefcase"
     },

@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
-import Bottomhomepage from "./Bhomepage";
-import PopupScreen from "./PopupScreen";
+import PopUpScreen from "./PopUpScreen";
+import Bhomepage from "./Bhomepage";
 
 
 
@@ -19,11 +19,11 @@ const Homepage = () => {
                <Slider /> 
             </div>
             <div>
-                <Bottomhomepage />
+                <Bhomepage />
             </div>
                 
           
-            <PopupScreen />
+            <PopUpScreen />
 
         </div>
         
