@@ -10,6 +10,7 @@ import Wishlist from "./WhishlistPage";
 import CartPage from "./CartPage"; 
 import MarketPage from "./MarketPage";
 import ProductDetailsPage from "./ProductDetail.js";
+import BuyerProfile from "./BuyerProfile.js"; 
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/marketplace" element={<MarketPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route path="/buyer-profile" element={<BuyerProfile />} />
       </Routes>
       
     
