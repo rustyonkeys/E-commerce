@@ -16,7 +16,7 @@ export const items = [
 
 {
     title: "RAM",
-    url: "CpuPage.js",
+    url: "/marketplace/category/RAM",
     cName: "nav-links",
     img: "https://www.shutterstock.com/shutterstock/photos/1892887324/display_1500/stock-photo-computer-memory-ram-on-motherboard-background-close-up-system-main-memory-random-access-memory-1892887324.jpg" 
 },

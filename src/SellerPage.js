@@ -114,6 +114,12 @@ const SellerPage = () => {
             </div>
           </div>
 
+          <div>
+            <label className="block font-medium">Product Category:</label>
+            
+          </div>
+
+
           {/* Product Description */}
           <div>
             <label className="block font-medium">Product Description:</label>

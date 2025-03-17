@@ -1,9 +1,17 @@
-import React, { useState, } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const PopUpScreen = () => {
-  const [showModal, setShowModal] = useState(true); // Show modal on load
+  const [showModal, setShowModal] = useState(false); // Default to false
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const popupShown = localStorage.getItem("popupShown");
+    if (!popupShown) {
+      setShowModal(true);
+      localStorage.setItem("popupShown", "true"); // Store that popup has been shown
+    }
+  }, []);
 
   const handleRedirect = (path) => {
     setShowModal(false);

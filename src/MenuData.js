@@ -37,8 +37,17 @@ export const MenuData = [
 
     {
         title: "Become a seller",
-        url: "#",
+        url: "/sell",
 
-    }
+    },
+
+    {
+        title: "Profile Page",
+        cName: "nav-links",
+        dropdown: [
+            { title: "Buyer Profile", url: "/buyer-profile" },
+            { title: "Seller Profile", url: "/seller-profile" }
+        ]
+    },
 
 ]

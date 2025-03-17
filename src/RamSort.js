@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import { items } from "./CpuData";
+import { useNavigate } from "react-router-dom"; 
+import { ramItems } from "./RamData";
 
-const CpuPage = () => {
+const RamSort = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortOrder, setSortOrder] = useState("none");
   const [dateSort, setDateSort] = useState("latest");
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
   
-  const navigate = useNavigate(); // Navigation hook
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     setWishlist(JSON.parse(localStorage.getItem("wishlist")) || []);
@@ -34,16 +34,14 @@ const CpuPage = () => {
     }
   };
 
-  let filteredItems = selectedCategory === "All" ? items : items.filter((item) => item.category === selectedCategory);
+  let filteredItems = selectedCategory === "All" ? ramItems : ramItems.filter((item) => item.category === selectedCategory);
 
-  // Sorting by price
   if (sortOrder !== "none") {
     filteredItems = [...filteredItems].sort((a, b) =>
       sortOrder === "lowToHigh" ? a.price - b.price : b.price - a.price
     );
   }
 
-  // Sorting by date
   filteredItems = [...filteredItems].sort((a, b) =>
     dateSort === "latest"
       ? new Date(b.dateListed) - new Date(a.dateListed)
@@ -55,9 +53,9 @@ const CpuPage = () => {
       <div className="flex flex-wrap gap-2 justify-between mb-6">
         <select className="p-2 border rounded-md" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
           <option value="All">All Categories</option>
-          <option value="Intel">Intel</option>
-          <option value="AMD">AMD</option>
-          <option value="Server Processors">Server Processors</option>
+          <option value="DDR3">DDR3</option>
+          <option value="DDR4">DDR4</option>
+          <option value="DDR5">DDR5</option>
         </select>
 
         <select className="p-2 border rounded-md" value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
@@ -82,12 +80,10 @@ const CpuPage = () => {
             <p className="text-blue-500 font-bold">${item.price}</p>
             <p className="text-gray-500 text-sm">Listed on: {item.dateListed}</p>
 
-            {/* Wishlist Button */}
             <button onClick={() => toggleWishlist(item)} className="text-red-500 mt-2">
               {wishlist.some((wishItem) => wishItem.id === item.id) ? "❤️" : "🤍"}
             </button>
 
-            {/* Buttons: Add to Cart & Product Details */}
             <div className="flex gap-2 mt-2">
               <button
                 onClick={() => addToCart(item)}
@@ -110,4 +106,4 @@ const CpuPage = () => {
   );
 };
 
-export default CpuPage;
+export default RamSort;

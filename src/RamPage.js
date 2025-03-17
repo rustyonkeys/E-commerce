@@ -1,26 +1,24 @@
 import React from 'react';
 import Navbar from "./Navbar";
-import CpuFilter from './CpuSort';
+import RamSort from './RamSort';
 
-
-const CpuPage = () => {
+const RamPage = () => {
     return (
         <div>
+            
             <div>
                 <Navbar />
             </div>
-            
+
             <div>
-                <CpuFilter />
+                <RamSort />
             </div>
 
         </div>
-);
+    );
 }
 
 
+export default RamPage;
 
 
-
-
-export default CpuPage;
